@@ -1,3 +1,4 @@
+
 import project from '/src/images/Capture.png';
 import avatar from '/src/images/MF.jpeg';
 import cv from '/src/images/cv.png';
@@ -10,6 +11,7 @@ import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Knowmore from '../components/knowmore';
 import Platform from '../components/plaformes';
+import { Link } from 'react-router-dom';
 function Home(){
     return(
         <div>
@@ -22,18 +24,22 @@ function Home(){
                             <p className=' text-white w-96 text'>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities.</p>
                         </div>
                     </div>
-                    <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center w-2/6 gap-2 rounded-lg shadow-lg  p-5 bg-gradient-to-t from-neutral-800 to-zinc-900'>
+                   <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center w-2/6 gap-2 rounded-lg shadow-lg  p-5 bg-gradient-to-t from-neutral-800 to-zinc-900'>
+                   <Link to="/projects">
                         <div><h2 className=' font-bold text-white'>MY WORKS</h2></div>
                         <div><img className=' h-28 w-40' src={project} alt="image" /></div>
                         <p className=' font-bold text-white'>ImmoCongo</p>
                         <p className=' font-bold text-white text-start'>Projects</p>
+                    </Link>
                     </div>
+                   
                     <div className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
                         <div><img className=' h-28 w-28' src={cv} alt="cv" /></div>
                         <p className=' text-white'>My CV</p>
                         <h2 className=' text-white font-bold'>Download</h2>
                     </div>
                 </div>
+                
                 <div className=' flex flex-row gap-10'>
                 <div className=' flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 w-96 gap-3'>
                     <div className=' flex flex-row justify-center items-center gap-8'>

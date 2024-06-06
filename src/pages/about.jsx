@@ -1,0 +1,102 @@
+import Footer from '../components/footer';
+import avatar from '/src/images/MF.jpeg';
+function About (){
+    return(
+        <div>
+            <div className=" flex flex-row gap-10">
+                <div>
+                <div className=' flex flex-col gap-8 items-center p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
+                        <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
+                        <div>
+                            <h1 className=' text-white font-bold'>Michel KAJIBWAMI</h1>
+                            <p className=' text-white w-96 text'>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities.</p>
+                        </div>
+                        <button className=' bg-blue-700 p-2 text-white rounded-lg hover:bg-red-500 shadow-md hover:scale-105 transition duration-300"'>Contact Me</button>
+                    </div>
+
+
+                </div>
+                <main className=' flex flex-col gap-8 text-white'>
+                    <div className=' flex flex-col gap-2'><h2 className=' font-bold text-xl'>ABOUT ME</h2><div className=' flex flex-col gap-2 h-[0.5px] w-full bg-slate-500'></div></div>
+                    <div>
+                        <p>As a web developer, I have experienced freelance opportunities, where I implement web content based on Javascript and other web technologies, such as HTML5, CSS3, Node.js, React.js, MongoDB and MySQL . I have successfully tested and improved the user experience and technical development of various web applications, and provided insightful suggestions to improve their functionality and performance.
+
+I'm passionate about learning new development programs and tools, and I'm always looking for innovations and best practices in web development. I am currently pursuing a Bachelor of Applied Science in Software Development at Kinshasa Digital Academy, where I am gaining strong skills and knowledge in web development, agile methodologies and WordPress. I'm a fan of clean code and the DRY principle, and I like to see projects through to the end and have a final product that's impeccable in every way. My goal is to become a full stack web developer and create impactful web solutions that meet the needs and expectations of customers and users.</p>
+                    </div>
+                    <div className=' flex flex-col gap-4'>
+                        <h2 className='font-bold text-lg'>EXPERIENCES</h2>
+                        <div className=' h-[0.5px] w-full bg-slate-500'></div>
+                        <div className=' flex flex-col gap-2'>
+                            <h3 className=' text-xl font-bold' >2023-2024</h3>
+                            <div>
+                            <h4  className=' text-xl font-bold text-blue-800'>Web Developper and web mobile</h4>
+                            <span> Kinshasa Digital Academy Kinshasa/RDCongo</span>
+                            <h5>Html5, Css3, Javascript, react, express, MongoDB, PostgreSql</h5>
+                            </div>
+                            <ul>
+                                <li>Design and develop responsive and interactive web and mobile web content.</li>
+                                <li>Participate in the creation of server-side features using Node.js technology</li>
+                                <li>Analyze database schemas, create SQL queries, use database management systems like MySQL, PostgreSQL,MongoDB</li>
+                            </ul>
+                        </div>
+                        <div div className=' flex flex-col gap-4'>
+                            <h3 className=' text-xl font-bold'> Juin 2023- august 2024</h3>
+                            <div>
+                            <h4 className=' text-xl font-bold text-blue-800'>Web Developper</h4>
+                            <span>General Secretariat of Employment, Labor and Social Security Kinshasa</span>
+                            <h5>Html5, Css3, Javascript, express, MongoDB</h5>
+                            </div>
+                            <ul>
+                                <li>Lead the virtualization and archiving of all administrative documents.</li>
+                                <li>Design an attractive and interactive showcase website.</li>
+                            </ul>
+                        </div>
+                       
+                    </div>
+                    <div className=' flex flex-col gap-2 text-white'>
+                        <h2 className=' font-bold text-lg'>EDUCATIONS</h2>
+                        <div className=' h-[0.5px] w-full bg-slate-500'></div>
+                        <div>
+                            <h3 className=' text-xl text-blue-300 font-bold'>web and mobile development</h3>
+                            <p>From May 2023 to May 2024 Kinshasa Digital Academy Kinshasa / DR Congo</p>
+                        </div>
+                        <div>
+                            <h3 className=' text-xl text-blue-300 font-bold'> Frontend Development</h3>
+                            <p>De septembre 2022 à mars 2023 OpenClassroom France</p>
+                        </div>
+                        <div>
+                            <h3 className=' text-xl text-blue-300 font-bold'>Network and telecommunications license</h3>
+                            <p>From October 2019 to December 2020 Higher Institute of Computer Science and Management Goma</p>
+                        </div>
+                    </div>
+                    <div className=' flex flex-col gap-2'>
+                        <h2 className=' font-bold text-lg'>Skills</h2>
+                        <div className=' h-[0.5px] w-full bg-slate-500'></div>
+                        <ul>
+                            <li>Angular</li>
+                            <li>Javascript</li>
+                            <li>WordPress</li>
+                            <li>Html5</li>
+                            <li>Css3</li>
+                            <li>Tailwind</li>
+                            <li>Express</li>
+                            <li>Scrum</li>
+                            <li>Github</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>SQL</li>
+                            <li>MySql</li>
+                            <li>MongoDB</li>
+                            <li>PosgreSql</li>
+                            <li>Next.js</li>
+                            <li>React native</li>
+                        </ul>
+                    </div>
+
+                </main>
+            </div>
+            <Footer/>
+        </div>
+    )
+}
+export default About;
