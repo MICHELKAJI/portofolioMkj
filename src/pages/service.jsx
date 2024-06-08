@@ -8,8 +8,8 @@ function Service(){
         <div>
             <div>
                 <main>
-                    <div className=" flex flex-row gap-10 ">
-                        <div className=" flex flex-col gap-20 justify-center p-5 rounded-lg bg-gradient-to-t from-neutral-800 to-zinc-900">
+                    <div className=" flex flex-row gap-10 mt-14 ">
+                        <div className=" flex flex-col gap-20 justify-center w-96 p-5 rounded-lg bg-gradient-to-t from-neutral-800 to-zinc-900">
                             <div className=" flex flex-row gap-2 "><div><img className=" h-8 w-8" src={full} alt="icon" /></div> <h2 className=" text-white font-bold">MERN, PERN</h2></div>
                             <div className=" flex flex-row gap-2 "><div><img  className=" h-8 w-8"  src={code} alt="icon" /></div> <h2 className=" text-white font-bold">CUSTOM CODING</h2></div>
                             <div className=" flex flex-row gap-2 "><div><img  className=" h-8 w-8"  src={worpress} alt="icon" /></div> <h2 className=" text-white font-bold">WORDPRESS</h2></div>

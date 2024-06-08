@@ -1,8 +1,8 @@
-import logo from '/src/images/mk_logo.png'
+
 function Footer(){
     return(
         <div>
-            <footer className=' flex flex-row justify-center p-5 items-center'>
+            <footer className=' flex flex-row justify-center p-5 items-center mb-0'>
                 <nav>
                     <ul className=" flex flex-row gap-3 justify-end">
                         <li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm ">HOME</li>

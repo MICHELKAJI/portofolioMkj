@@ -3,7 +3,7 @@ import avatar from '/src/images/MF.jpeg';
 function About (){
     return(
         <div>
-            <div className=" flex flex-row gap-10">
+            <div className=" flex flex-row gap-10 mt-20">
                 <div>
                 <div className=' flex flex-col gap-8 items-center p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
                         <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>

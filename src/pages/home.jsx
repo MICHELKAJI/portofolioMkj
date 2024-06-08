@@ -12,16 +12,35 @@ import Contact from '../components/contact';
 import Knowmore from '../components/knowmore';
 import Platform from '../components/plaformes';
 import { Link } from 'react-router-dom';
+import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
 function Home(){
+    const words = [
+        {
+          text: "Certified web developer who specializes",
+        },
+        {
+          text: "in working with JavaScript,",
+        },
+        {
+          text: "React, Node.js; WordPress and MongoBD.",
+        },
+        {
+          text: "Currently exploring full-stack freelance",
+        },
+        {
+          text: "development opportunities.",
+          className: "text-white w-4/6",
+        },]
     return(
         <div>
-            <main className=' flex flex-col gap-3 font-sans'>
+            <main className=' flex flex-col gap-3 font-sans mt-20 h-full'>
                 <div className=' flex flex-row gap-10'>
                     <div className=' flex flex-row gap-8 items-center w-3/6 p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
                         <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
                             <h1 className=' text-white font-bold'>Michel KAJIBWAMI</h1>
-                            <p className=' text-white w-96 text'>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities.</p>
+                            <TypewriterEffectSmooth words={words}/>
+                            <p className=' text-white w-96'> </p>
                         </div>
                     </div>
                    <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center w-2/6 gap-2 rounded-lg shadow-lg  p-5 bg-gradient-to-t from-neutral-800 to-zinc-900'>

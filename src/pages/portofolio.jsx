@@ -4,7 +4,7 @@ import clone from '/src/images/clone.png'
 function Projects (){
     return(
         <div>
-            <main className=" text-white flex flex-col gap-10 ">
+            <main className=" text-white flex flex-col gap-14 ">
                 <h2 className=' text-white font-bold text-lg'>PROJECTS</h2>
                 <div className=' flex flex-row gap-10'>
                     <div className=' flex flex-col gap-3'>
