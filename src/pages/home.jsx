@@ -1,5 +1,5 @@
 
-import project from '/src/images/Capture.png';
+
 import avatar from '/src/images/MF.jpeg';
 import cv from '/src/images/cv.png';
 import wordpress from '/src/images/wordPress.png';
@@ -13,7 +13,12 @@ import Knowmore from '../components/knowmore';
 import Platform from '../components/plaformes';
 import { Link } from 'react-router-dom';
 import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
+import { motion } from "framer-motion";
+import { ImagesSlider } from "../components/ui/images-slider";
+
 function Home(){
+    const images = ["src/images/Capture.png","src/images/clone.png", "src/images/Capturee.png"]
+
     const words = [
         {
           text: "Certified web developer who specializes",
@@ -33,34 +38,46 @@ function Home(){
         },]
     return(
         <div>
-            <main className=' flex flex-col gap-3 font-sans mt-20 h-full'>
-                <div className=' flex flex-row gap-10'>
-                    <div className=' flex flex-row gap-8 items-center w-3/6 p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
-                        <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
+            <main className=' flex flex-col gap-3 font-sans mt-20 h-screen bottom-0  '>
+                <div className=' flex lg:flex-row justify-center flex-wrap lg:gap-10 gap-2'>
+                    <div className=' flex lg:flex-row flex-wrap flex-col lg:gap-8 items-center lg:w-3/6 p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
+                        <div><motion.img initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
-                            <h1 className=' text-white font-bold'>Michel KAJIBWAMI</h1>
+                            <motion.h1 initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white font-bold'>Michel KAJIBWAMI</motion.h1>
                             <TypewriterEffectSmooth words={words}/>
-                            <p className=' text-white w-96'> </p>
                         </div>
                     </div>
-                   <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center w-2/6 gap-2 rounded-lg shadow-lg  p-5 bg-gradient-to-t from-neutral-800 to-zinc-900'>
+                   <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center lg:w-[25rem] gap-2 rounded-lg shadow-lg  lg:p-5 p-2 bg-gradient-to-t from-neutral-800 to-zinc-900'>
                    <Link to="/projects">
                         <div><h2 className=' font-bold text-white'>MY WORKS</h2></div>
-                        <div><img className=' h-28 w-40' src={project} alt="image" /></div>
+                        <ImagesSlider className="lg:h-[10rem]" images={images}>
+     
+                        <motion.div  initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }} className=' h-28 w-40'></motion.div>
+                        </ImagesSlider>
                         <p className=' font-bold text-white'>ImmoCongo</p>
                         <p className=' font-bold text-white text-start'>Projects</p>
                     </Link>
                     </div>
                    
                     <div className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
-                        <div><img className=' h-28 w-28' src={cv} alt="cv" /></div>
+                        <div><img className=' lg:h-28 lg:w-28 h-14 w-14' src={cv} alt="cv" /></div>
                         <p className=' text-white'>My CV</p>
                         <h2 className=' text-white font-bold'>Download</h2>
                     </div>
                 </div>
                 
-                <div className=' flex flex-row gap-10'>
-                <div className=' flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 w-96 gap-3'>
+                <div className='  flex lg:flex-row justify-center flex-wrap lg:gap-8 gap-3'>
+                <Link to='/service'><div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 lg:w-96 w-40 lg:gap-3'>
                     <div className=' flex flex-row justify-center items-center gap-8'>
                         <div className=' h-8 w-8'><img src={wordpress} alt="logo" /></div>
                         <div className=' h-8 w-8'><img src={solving} alt="logo" /></div>
@@ -68,7 +85,8 @@ function Home(){
                     </div>
                     <p className=' text-white text-xs text-center'>SPECIALIZATION</p>
                     <h2 className=' text-white font-bold text-center'>Service Offering</h2>
-                </div>
+                 </div>
+                </Link>
                 <div>
                     <Profil/>
                 </div>
@@ -76,12 +94,16 @@ function Home(){
                 <Realisation/>
                 </div>
                 </div>
-                <div className=' flex flex-row gap-10'>
+               
+                <div className=' flex lg:flex-row flex-wrap justify-center lg:gap-10 gap-2 '>
                     <div><Contact/></div>
                     <div><Knowmore/></div>
                     <div><Platform/></div>
                 </div>
+                <div>
                 <Footer/>
+                </div>
+              
             </main>
         </div>
     )

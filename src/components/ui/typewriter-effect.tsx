@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "../../utils/cn";
+import { cn } from "../../util/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
@@ -72,7 +72,7 @@ export const TypewriterEffect = ({
   return (
     <div
       className={cn(
-        "text-white w-96 text",
+        "text-white w-96",
         className
       )}
     >
