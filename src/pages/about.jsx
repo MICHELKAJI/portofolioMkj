@@ -2,7 +2,9 @@ import Footer from '../components/footer';
 import avatar from '/src/images/MF.jpeg';
 import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
 import { motion } from "framer-motion";
+
 function About (){
+   
     const words = [
         {
           text: "Certified web developer who specializes",

@@ -43,7 +43,7 @@ function Home(){
                     <div className=' flex lg:flex-row flex-wrap flex-col lg:gap-8 items-center lg:w-3/6 p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
                         <div><motion.img initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
-                            <motion.h1 initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white font-bold'>Michel KAJIBWAMI</motion.h1>
+                            <motion.h1 initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white font-bold px-3'>Michel KAJIBWAMI</motion.h1>
                             <TypewriterEffectSmooth words={words}/>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ function Home(){
                     <div className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
                         <div><img className=' lg:h-28 lg:w-28 h-14 w-14' src={cv} alt="cv" /></div>
                         <p className=' text-white'>My CV</p>
-                        <h2 className=' text-white font-bold'>Download</h2>
+                        <a href="src/images/cvMichel.pdf" target='_bank' download='cvMichel.pdf'><h2 className=' text-white font-bold'>Download</h2></a>
                     </div>
                 </div>
                 
