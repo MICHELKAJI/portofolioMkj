@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 import { ImagesSlider } from "../components/ui/images-slider";
 
 function Home(){
-    const images = ["src/images/Capture.png","src/images/clone.png", "src/images/Capturee.png"]
+    const images = ["/src/images/Capture.png","/src/images/clone.png", "/src/images/Capturee.png"]
 
     const words = [
         {
