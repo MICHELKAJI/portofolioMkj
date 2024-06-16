@@ -97,7 +97,6 @@ export const TypewriterEffect = ({
     </div>
   );
 };
-
 export const TypewriterEffectSmooth = ({
   words,
   className,
