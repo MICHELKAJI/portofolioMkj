@@ -12,30 +12,14 @@ import Contact from '../components/contact';
 import Knowmore from '../components/knowmore';
 import Platform from '../components/plaformes';
 import { Link } from 'react-router-dom';
-import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
 import { motion } from "framer-motion";
 import { ImagesSlider } from "../components/ui/images-slider";
 
-function Home(){
-    const images = ["/src/images/Capture.png","/src/images/clone.png", "/src/images/Capturee.png"]
 
-    const words = [
-        {
-          text: "Certified web developer who specializes",
-        },
-        {
-          text: "in working with JavaScript,",
-        },
-        {
-          text: "React, Node.js; WordPress and MongoBD.",
-        },
-        {
-          text: "Currently exploring full-stack freelance",
-        },
-        {
-          text: "development opportunities.",
-          className: "text-white w-4/6",
-        },]
+function Home(){
+
+  const images = ["/src/images/Capture.png","/src/images/clone.png", "/src/images/Capturee.png"]
+
     return(
         <div>
             <main className=' flex flex-col gap-3 font-sans mt-20 h-screen bottom-0  '>
@@ -43,8 +27,8 @@ function Home(){
                     <div className=' flex lg:flex-row flex-wrap flex-col lg:gap-8 items-center lg:w-3/6 p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
                         <div><motion.img initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
-                            <motion.h1 initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white font-bold px-3'>Michel KAJIBWAMI</motion.h1>
-                            <TypewriterEffectSmooth words={words}/>
+                            <motion.h1 initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white font-bold'>Michel KAJIBWAMI</motion.h1>
+                            <motion.p initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white w-96 leading-6'>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities. </motion.p>
                         </div>
                     </div>
                    <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center lg:w-[25rem] gap-2 rounded-lg shadow-lg  lg:p-5 p-2 bg-gradient-to-t from-neutral-800 to-zinc-900'>

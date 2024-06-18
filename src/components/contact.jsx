@@ -12,7 +12,7 @@ function Contact(){
     return(
         <div>
             <a href="#" onClick={handleClick}>
-            <motion.div initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className='hover:scale-105 transition duration-300 flex flex-col gap-1 text-white shadow-lg  p-10 bg-gradient-to-t from-neutral-800 to-zinc-900 lg:w-[30rem] w-60 rounded-lg'>
+            <motion.div initial={{opacity: 0, x: 100}} animate={{opacity: 1, x: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className='hover:scale-105 transition duration-300 flex flex-col gap-1 text-white shadow-lg  p-10 bg-gradient-to-t from-neutral-800 to-zinc-900 lg:w-[30rem] w-60 rounded-lg'>
                 <h2>Let's</h2>
                 <div className=' flex flex-row justify-between items-center'><h3>Work <strong className=' text-blue-800'>together.</strong></h3><div><img className=' h-5 w-10' src={arrow} alt="logo" /></div></div>
             </motion.div>

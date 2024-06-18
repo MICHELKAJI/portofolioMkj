@@ -23,11 +23,9 @@ function Header(){
       }
 
     return(
-        <div className='fixed top-0 left-0  lg:w-[100%] z-50 bg-black w-screen   '>
+        <div className='fixed top-0 left-0   lg:w-[100%] z-50 bg-black w-[100%] '>
             <header className='flex flex-row justify-between items-center lg:h-9 lg:w-[100%] w-screen lg:p-8'>
                 <div> <Link to='/'><img className=' h-16 w-16 ' src={logo} alt="logo" /></Link></div>
-               
-               
                 <nav>
                     <ul className=" hidden md:flex flex-row lg:gap-3 gap-1 justify-end">
                         <Link to='/'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm ">HOME</li></Link>
@@ -36,7 +34,7 @@ function Header(){
                         <Link to='/contacts'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm">CONTACT</li></Link>
                         <a href="#" onClick={handleClick}><li className=" text-blue-700 font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm bg-slate-200">Let's Tolk</li></a>
                     </ul>
-                    <div><img className=' block md:hidden h-10 w-10 pr-2' src={menu} alt="menu" onClick={OpenModal} /></div>
+                    <div><img className=' block md:hidden h-10 w-10 pr-1' src={menu} alt="menu" onClick={OpenModal} /></div>
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
                         <Menu close={closeModal}/>
                     </Modal>
