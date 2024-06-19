@@ -6,6 +6,7 @@ function Menu({close}){
                 <Link to='/'><li onClick={close}>Home</li></Link>
                 <Link to='/about'><li onClick={close}>About</li></Link>
                 <Link to='/service'><li onClick={close}>Service</li></Link>
+                <Link to='/projects'><li onClick={close}>Projects</li></Link>
                 <Link to='/contacts'><li onClick={close}>Contact</li></Link>
             </ul>
         </div>

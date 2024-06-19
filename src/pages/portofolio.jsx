@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function Projects (){
     return(
         <div>
-            <main className=" text-white flex flex-col gap-14 mx-10 ">
+            <main className=" text-white flex flex-col gap-14 p-8 lg:w-[100%] w-[100%] h-auto">
                 <h2 className=' text-white font-bold text-lg'>PROJECTS</h2>
                 <div className=' flex lg:flex-row flex-col lg:gap-10 gap-2'>
                     <div className=' flex flex-col gap-3'>

@@ -3,6 +3,14 @@ import avatar from '/src/images/MF.jpeg';
 import { motion } from "framer-motion";
 
 function About (){
+    const handleClick = () => {
+        const phoneNumber = "+243970607351"; 
+        const message = "Ceci est un message de test"; 
+    
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+
    
     return(
         <div>
@@ -12,9 +20,9 @@ function About (){
                         <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
                             <h1 className=' text-white font-bold'>Michel KAJIBWAMI</h1>
-                            <p className=' text-white lg:w-96 leading-6'>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities. </p>
+                            <p className=' text-white lg:w-96 leading-6 '>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities. </p>
                         </div>
-                        <button className=' bg-blue-700 p-2 text-white rounded-lg hover:bg-red-500 shadow-md hover:scale-105 transition duration-300"'>Contact Me</button>
+                        <button onClick={handleClick} className=' bg-blue-700 p-2 text-white rounded-lg hover:bg-red-500 shadow-md hover:scale-105 transition duration-300"'>Contact Me</button>
                     </div>
                 </div>
                 <main className=' flex flex-col gap-8 text-white'>
