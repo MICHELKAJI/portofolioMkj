@@ -16,21 +16,21 @@ function About (){
         <div>
             <div className=" flex lg:flex-row flex-col lg:gap-10 mt-20 mx-5">
                 <div>
-                <div className=' flex flex-col gap-8 items-center p-5 rounded-lg shadow-lg bg-gradient-to-t  from-neutral-800 to-zinc-900 '>
+                <motion.div initial={{opacity: 0, x: 100}} animate={{opacity: 1, x: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' flex flex-col gap-8 items-center p-5 rounded-lg shadow-lg bg-gradient-to-t  from-neutral-800 to-zinc-900 '>
                         <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
                             <h1 className=' text-white font-bold'>Michel KAJIBWAMI</h1>
                             <p className=' text-white lg:w-96 leading-6 '>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities. </p>
                         </div>
                         <button onClick={handleClick} className=' bg-blue-700 p-2 text-white rounded-lg hover:bg-red-500 shadow-md hover:scale-105 transition duration-300"'>Contact Me</button>
-                    </div>
+                    </motion.div>
                 </div>
                 <main className=' flex flex-col gap-8 text-white'>
                     <div className=' flex flex-col gap-2'><h2 className=' font-bold text-xl'>ABOUT ME</h2><div className=' flex flex-col gap-2 h-[0.5px] w-full bg-slate-500'></div></div>
                     <div>
                         <motion.p initial={{opacity: 0, x: 100}} animate={{opacity: 1, x: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' p-2'>As a web developer, I have experienced freelance opportunities, where I implement web content based on Javascript and other web technologies, such as HTML5, CSS3, Node.js, React.js, MongoDB and MySQL . I have successfully tested and improved the user experience and technical development of various web applications, and provided insightful suggestions to improve their functionality and performance.
 
-I'm passionate about learning new development programs and tools, and I'm always looking for innovations and best practices in web development. I am currently pursuing a Bachelor of Applied Science in Software Development at Kinshasa Digital Academy, where I am gaining strong skills and knowledge in web development, agile methodologies and WordPress. I'm a fan of clean code and the DRY principle, and I like to see projects through to the end and have a final product that's impeccable in every way. My goal is to become a full stack web developer and create impactful web solutions that meet the needs and expectations of customers and users.</motion.p>
+I'm passionate about learning new development programs and tools, and I'm always looking for innovations and best practices in web development.</motion.p>
                     </div>
                     <motion.div initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' flex flex-col gap-4'>
                         <h2 className='font-bold text-lg'>EXPERIENCES</h2>
