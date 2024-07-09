@@ -25,7 +25,7 @@ function Home(){
 
     return(
         <div>
-            <main className=' flex flex-col gap-3 font-sans mt-20 bottom-auto'>
+            <main className=' flex flex-col gap-3 font-sans mt-20 h-full w-full'>
                 <div className=' flex lg:flex-row justify-center flex-wrap lg:gap-10 gap-2'>
                     <div className=' flex lg:flex-row flex-wrap flex-col lg:gap-8 items-center lg:w-3/6 lg:p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
                         <div><motion.img initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
