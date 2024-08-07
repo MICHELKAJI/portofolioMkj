@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Route, Routes } from "react-router-dom"
 import Home from "./pages/home"
 import Service from "./pages/service"
 import Layout from "./layoute"
@@ -10,7 +10,7 @@ import PageContacts from "./pages/Pagecontacts"
 function App (){
   return(
     <div>
-      <BrowserRouter>
+      <Router>
       <Layout/>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -19,7 +19,7 @@ function App (){
         <Route path="/projects" element={<Projects/>}/> 
         <Route path="/contacts" element={<PageContacts/>}/> 
       </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   )
 }
