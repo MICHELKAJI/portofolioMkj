@@ -22,8 +22,13 @@ import imagess from '/src/images/apeh.png';
 
 function Home(){
     const downloadFile = () => {
-        fetch('public/cvMichel.pdf')
-          .then(response => response.blob())
+        fetch('/cvMichel.pdf')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.blob();
+          })
           .then(blob => {
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -34,8 +39,9 @@ function Home(){
             a.click();
             window.URL.revokeObjectURL(url);
           })
-          .catch(() => alert('Erreur lors du téléchargement du fichier.'));
+          .catch(error => alert('Erreur lors du téléchargement du fichier : ' + error.message));
       };
+    
 
 
   const images = [imageOne, imageTow, imageThree, imagess]
