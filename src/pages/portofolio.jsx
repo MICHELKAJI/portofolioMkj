@@ -1,9 +1,24 @@
+import React, { useEffect, useRef, useState } from 'react';
 import image from '/src/images/Capture.png';
 import images from '/src/images/Capturee.png';
 import imagess from '/src/images/apeh.png';
 import clone from '/src/images/clone.png';
-import { motion } from "framer-motion";
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+
 function Projects (){
+    const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  React.useEffect(() => {
+    if (inView && !hasAnimated) {
+      controls.start('visible');
+      setHasAnimated(true);
+    }
+  }, [controls, inView, hasAnimated]);
+  
     return(
         <div>
             <main className=" text-white flex flex-col  gap-14 lg:p-8 p-4 lg:w-full w-sreen h-auto">
@@ -55,7 +70,7 @@ function Projects (){
                     <div><img className=' h-60 w-96' src={clone} alt="" /></div>
                     </div>
                     <div className=' w-[1px] bg-slate-300'></div>
-                    <div className=' flex flex-col gap-3'>
+                    <motion.div ref={ref} initial="hidden" animate={controls} variants={{visible: { opacity: 1, y: 0 },hidden: { opacity: 0, y: 100 }}} transition={{ duration: 0.8, ease: 'easeInOut' }} className=' flex flex-col gap-3'>
                         <h2 className='text-white font-bold text-lg'>DESCRIPTION OF THE PROJECT</h2>
                         <p className=' w-96'>Twitter clone is a project developed in react which allowed me to take control of react.js and make it my favorite library on the frontend side....</p>
                         <div>
@@ -66,7 +81,7 @@ function Projects (){
                         </div>
                         </div>
                         <a className=' text-blue-300 hover:text-red-500' href="#" target='_blank'>following the link...</a>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className=' flex lg:flex-row justify-center flex-col lg:gap-10 gap-3'>
                     <div className=' flex flex-col gap-3'>
@@ -74,7 +89,7 @@ function Projects (){
                     <div><img className=' h-60 w-96' src={imagess} alt="" /></div>
                     </div>
                     <div className=' w-[1px] bg-slate-300'></div>
-                    <motion.div initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' flex flex-col gap-3'>
+                    <motion.div ref={ref} initial="hidden" animate={controls} variants={{visible: { opacity: 1, y: 0 },hidden: { opacity: 0, y: 100 }}} transition={{ duration: 0.8, ease: 'easeInOut' }} className=' flex flex-col gap-3'>
                         <h2 className='text-white font-bold text-lg'>DESCRIPTION OF THE PROJECT</h2>
                         <p className=' w-96'>The Association for the promotion of entrepreneurship and humanitarian aid APEH/Asbl in single is the result of the work of a few visionary and dynamic young people embodying the idea of ​​the main initiator who is the only one of entrepreneurship as well as the love of neighbor</p>
                         <div>
