@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Home from "./pages/home"
 import Service from "./pages/service"
 import Layout from "./layoute"
@@ -10,16 +10,16 @@ import PageContacts from "./pages/Pagecontacts"
 function App (){
   return(
     <div>
-      <BrowserRouter>
+     
       <Layout/>
-      <Router>
+      <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/service" element={<Service/>}/> 
         <Route path="/about" element={<About/>}/> 
         <Route path="/projects" element={<Projects/>}/> 
         <Route path="/contacts" element={<PageContacts/>}/> 
-      </Router>
-      </BrowserRouter>
+      </Routes>
+      
     </div>
   )
 }
