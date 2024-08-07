@@ -14,7 +14,7 @@ function About (){
    
     return(
         <div>
-            <div className=" flex lg:flex-row flex-col lg:gap-10 mt-20 mx-5">
+            <div className=" flex lg:flex-row flex-col lg:gap-10 mt-20 mx-5"> 
                 <div>
                 <motion.div initial={{opacity: 0, x: 100}} animate={{opacity: 1, x: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' flex flex-col gap-8 items-center p-5 rounded-lg shadow-lg bg-gradient-to-t  from-neutral-800 to-zinc-900 '>
                         <div><img className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
