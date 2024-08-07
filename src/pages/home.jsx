@@ -17,16 +17,26 @@ import { ImagesSlider } from "../components/ui/images-slider";
 import imageOne from '/src/images/Capture.png';
 import imageTow from '/src/images/clone.png';
 import imageThree from '/src/images/Capturee.png'
+import imagess from '/src/images/apeh.png';
 
 
 function Home(){
+    const handleDownload = () => {
+        
+        const link = document.createElement('a');
+        link.href = 'src/images/cvMichel.pdf'; 
+        link.setAttribute('download', 'cvMichel.pdf');
+        link.click(); 
+        document.body.removeChild(link); 
+    };
 
-  const images = [imageOne, imageTow, imageThree]
+
+  const images = [imageOne, imageTow, imageThree, imagess]
 
     return(
         <div>
-            <main className=' flex flex-col gap-3 font-sans mt-20 h-full w-full'>
-                <div className=' flex lg:flex-row justify-center flex-wrap lg:gap-10 gap-2'>
+            <main className=' flex flex-col gap-5 font-sans mt-20 h-auto w-full'>
+                <div className=' flex lg:flex-row justify-center flex-wrap lg:gap-5 gap-2'>
                     <div className=' flex lg:flex-row flex-wrap flex-col lg:gap-8 items-center lg:w-3/6 lg:p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
                         <div><motion.img initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
                         <div>
@@ -51,19 +61,18 @@ function Home(){
           duration: 0.6,
         }} className=' h-28 w-40'></motion.div>
                         </ImagesSlider>
-                        <p className=' font-bold text-white'>ImmoCongo</p>
                         <p className=' font-bold text-white text-start'>Projects</p>
                     </Link>
                     </div>
                    
-                    <div className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
+                    <div onClick={handleDownload} className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
                         <div><img className=' lg:h-28 lg:w-28 h-14 w-14' src={cv} alt="cv" /></div>
                         <p className=' text-white'>My CV</p>
-                        <a href="src/images/cvMichel.pdf" target='_bank' download='cvMichel.pdf'><h2 className=' text-white font-bold'>Download</h2></a>
+                        <p><h2 className=' text-white font-bold'>Download</h2></p>
                     </div>
                 </div>
                 
-                <div className='  flex lg:flex-row justify-center flex-wrap lg:gap-8 gap-3'>
+                <div className='  flex lg:flex-row justify-center flex-wrap lg:gap-5 gap-3'>
                 <Link to='/service'><div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 lg:w-96 w-40 lg:gap-3'>
                     <div className=' flex flex-row justify-center items-center gap-8'>
                         <div className=' h-8 w-8'><img src={wordpress} alt="logo" /></div>

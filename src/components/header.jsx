@@ -4,6 +4,7 @@ import menu from '/src/images/Menu.png'
 import { useState } from 'react';
 import Modal from './modal';
 import Menu from './menuBurger';
+import { motion } from "framer-motion";
 
 function Header(){
     const handleClick = () => {
@@ -32,7 +33,7 @@ function Header(){
                         <Link to='/about'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm">ABOUT</li></Link>
                         <Link to='/service'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm">SERVICES</li></Link>
                         <Link to='/contacts'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm">CONTACT</li></Link>
-                        <a href="#" onClick={handleClick}><li className=" text-blue-700 font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm bg-slate-200">Let's Talk</li></a>
+                        <motion.a animate={{scale: [1, 5, 5, 1, 1],rotate: [0, 0, 270, 270, 0],borderRadius: ["20%", "20%", "50%", "50%", "20%"],}} href="#" onClick={handleClick}><li className=" text-blue-700 font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm bg-slate-200">Let's Talk</li></motion.a>
                     </ul>
                     <div><img className=' block md:hidden h-10 w-10' src={menu} alt="menu" onClick={OpenModal} /></div>
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
