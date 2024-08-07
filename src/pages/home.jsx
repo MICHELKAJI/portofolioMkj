@@ -52,7 +52,7 @@ function Home(){
                         </div>
                     </div>
                    <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center lg:w-[25rem] gap-2 rounded-lg shadow-lg  lg:p-5 p-2 bg-gradient-to-t from-neutral-800 to-zinc-900'>
-                   
+                   <Link to='/projects'>
                         <div><h2 className=' font-bold text-white'>MY WORKS</h2></div>
                         <ImagesSlider className="lg:h-[10rem]" images={images}>
      
@@ -69,6 +69,7 @@ function Home(){
         }} className=' h-28 w-40'></motion.div>
                         </ImagesSlider>
                         <p className=' font-bold text-white text-start'>Projects</p>
+                    </Link>
                     
                     </div>
                    
