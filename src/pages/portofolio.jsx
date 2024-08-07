@@ -5,6 +5,7 @@ import imagess from '/src/images/apeh.png';
 import clone from '/src/images/clone.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import AnimatedItem from '../components/animation';
 
 
 function Projects (){
@@ -83,13 +84,15 @@ function Projects (){
                         <a className=' text-blue-300 hover:text-red-500' href="#" target='_blank'>following the link...</a>
                     </motion.div>
                 </div>
+                
                 <div className=' flex lg:flex-row justify-center flex-col lg:gap-10 gap-3'>
                     <div className=' flex flex-col gap-3'>
                         <h3 className=' text-blue-600 font-bold text-lg'>APEH</h3>
                     <div><img className=' h-60 w-96' src={imagess} alt="" /></div>
                     </div>
+                  <AnimatedItem>
                     <div className=' w-[1px] bg-slate-300'></div>
-                    <motion.div ref={ref} initial="hidden" animate={controls} variants={{visible: { opacity: 1, y: 0 },hidden: { opacity: 0, y: 100 }}} transition={{ duration: 0.8, ease: 'easeInOut' }} className=' flex flex-col gap-3'>
+                    <div className=' flex flex-col gap-3'>
                         <h2 className='text-white font-bold text-lg'>DESCRIPTION OF THE PROJECT</h2>
                         <p className=' w-96'>The Association for the promotion of entrepreneurship and humanitarian aid APEH/Asbl in single is the result of the work of a few visionary and dynamic young people embodying the idea of ​​the main initiator who is the only one of entrepreneurship as well as the love of neighbor</p>
                         <div>
@@ -103,7 +106,9 @@ function Projects (){
                         </div>
                         </div>
                         <a className=' text-blue-300 hover:text-red-500' href="https://apeh.vercel.app/" target='_blank'>following the link...</a>
-                    </motion.div>
+                       
+                    </div>
+                    </AnimatedItem>
                 </div>
             </main>
 
