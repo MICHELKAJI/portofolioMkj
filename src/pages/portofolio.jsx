@@ -80,7 +80,7 @@ function Projects (){
                         <div>
                         <h3 className='text-white font-bold text-lg'>Skills</h3>
                         <div className=' flex lg:flex-row w-60 flex-wrap gap-3'>
-                            <h4 className=' bg-slate-200 text-black w-20 p-1 rounded-lg text-center center'>React.Js</h4>
+                            <h4 className=' bg-slate-200 text-black w-20 p-1 rounded-lg text-center center'>Angular</h4>
                             <h4 className=' bg-slate-200 text-black w-20 p-1 rounded-lg text-center center'>Express.js</h4>
                             <h4 className=' bg-slate-200 text-black w-32 p-1 rounded-lg text-center center'>PostgreSql</h4>
                             <h4 className=' bg-slate-200 text-black w-20 p-1 rounded-lg text-center center'>Prisma</h4>
