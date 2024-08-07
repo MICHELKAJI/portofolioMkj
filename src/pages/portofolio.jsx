@@ -52,6 +52,7 @@ function Projects (){
                     <div><img className=' h-60 w-96' src={images} alt="" /></div>
                     </div>
                     <div className=' w-[1px] bg-slate-300'></div>
+                    <AnimatedItem>
                     <motion.div initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' flex flex-col gap-3'>
                         <h2 className='text-white font-bold text-lg'>DESCRIPTION OF THE PROJECT</h2>
                         <p className=' w-96'>Miva Takatisha Group is a landing page for a cleaning service....</p>
@@ -64,6 +65,7 @@ function Projects (){
                         </div>
                         <a className=' text-blue-300 hover:text-red-500' href="https://live-miva.pantheonsite.io/" target='_blank'>following the link...</a>
                     </motion.div>
+                    </AnimatedItem>
                 </div>
                 <div className=' flex lg:flex-row justify-center flex-col lg:gap-10'>
                     <div className=' flex flex-col gap-3'>

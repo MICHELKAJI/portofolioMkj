@@ -21,14 +21,21 @@ import imagess from '/src/images/apeh.png';
 
 
 function Home(){
-    const handleDownload = () => {
-        
-        const link = document.createElement('a');
-        link.href = 'src/images/cvMichel.pdf'; 
-        link.setAttribute('download', 'cvMichel.pdf');
-        link.click(); 
-        document.body.removeChild(link); 
-    };
+    const downloadFile = () => {
+        fetch('public/cvMichel.pdf')
+          .then(response => response.blob())
+          .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'cvMichel.pdf';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+          })
+          .catch(() => alert('Erreur lors du téléchargement du fichier.'));
+      };
 
 
   const images = [imageOne, imageTow, imageThree, imagess]
@@ -45,7 +52,7 @@ function Home(){
                         </div>
                     </div>
                    <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center lg:w-[25rem] gap-2 rounded-lg shadow-lg  lg:p-5 p-2 bg-gradient-to-t from-neutral-800 to-zinc-900'>
-                   <Link to="/projects">
+                   
                         <div><h2 className=' font-bold text-white'>MY WORKS</h2></div>
                         <ImagesSlider className="lg:h-[10rem]" images={images}>
      
@@ -62,10 +69,10 @@ function Home(){
         }} className=' h-28 w-40'></motion.div>
                         </ImagesSlider>
                         <p className=' font-bold text-white text-start'>Projects</p>
-                    </Link>
+                    
                     </div>
                    
-                    <div onClick={handleDownload} className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
+                    <div onClick={downloadFile} className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
                         <div><img className=' lg:h-28 lg:w-28 h-14 w-14' src={cv} alt="cv" /></div>
                         <p className=' text-white'>My CV</p>
                         <p><h2 className=' text-white font-bold'>Download</h2></p>
