@@ -92,7 +92,7 @@ function About (){
                         </div>
                     </div>
                     <div className=' flex flex-col gap-2'>
-                        <h2 className=' font-bold text-lg'>Skills</h2>
+                        <h2 className=' font-bold text-lg'>SKILLS</h2>
                         <div className=' h-[0.5px] w-full bg-slate-500'></div>
                        <div className=' flex flex-row gap-5 flex-wrap justify-center p-4'>
                         <div><img className='h-14 w-14 shadow' src={html} alt="logo" /></div>
