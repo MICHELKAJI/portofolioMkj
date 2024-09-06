@@ -1,6 +1,19 @@
 import Footer from '../components/footer';
 import avatar from '/src/images/MF.jpeg';
 import { motion } from "framer-motion";
+import js from "/src/images/JavaScript.png";
+import html from "/src/images/Html5.png";
+import css from "/src/images/CSS3.png";
+import tailwind from "/src/images/TailwindCSS.png";
+import node from "/src/images/Nodejs.png";
+import express from "/src/images/ExpressJs.png";
+import mongo from "/src/images/MongoDb.png";
+import mysql from "/src/images/MySQLLogo.png";
+import postgres from "/src/images/PostgreSQL.png";
+import github from "/src/images/GitHub.png";
+import react from "/src/images/React.png";
+import angular from "/src/images/AngularJS.png";
+import next from "/src/images/Next.js.png";
 
 function About (){
     const handleClick = () => {
@@ -30,7 +43,7 @@ function About (){
                     <div>
                         <motion.p initial={{opacity: 0, x: 100}} animate={{opacity: 1, x: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' p-2'>As a web developer, I have experienced freelance opportunities, where I implement web content based on Javascript and other web technologies, such as HTML5, CSS3, Node.js, React.js, MongoDB and MySQL . I have successfully tested and improved the user experience and technical development of various web applications, and provided insightful suggestions to improve their functionality and performance.
 
-I'm passionate about learning new development programs and tools, and I'm always looking for innovations and best practices in web development.</motion.p>
+                               I'm passionate about learning new development programs and tools, and I'm always looking for innovations and best practices in web development.</motion.p>
                     </div>
                     <motion.div initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' flex flex-col gap-4'>
                         <h2 className='font-bold text-lg'>EXPERIENCES</h2>
@@ -71,7 +84,7 @@ I'm passionate about learning new development programs and tools, and I'm always
                         </div>
                         <div>
                             <h3 className=' text-xl text-blue-300 font-bold'> Frontend Development</h3>
-                            <p>De septembre 2022 à mars 2023 OpenClassroom France</p>
+                            <p>Frome september 2022 to March 2023 OpenClassroom France</p>
                         </div>
                         <div>
                             <h3 className=' text-xl text-blue-300 font-bold'>Network and telecommunications license</h3>
@@ -81,25 +94,21 @@ I'm passionate about learning new development programs and tools, and I'm always
                     <div className=' flex flex-col gap-2'>
                         <h2 className=' font-bold text-lg'>Skills</h2>
                         <div className=' h-[0.5px] w-full bg-slate-500'></div>
-                        <ul>
-                            <li>Angular</li>
-                            <li>Javascript</li>
-                            <li>WordPress</li>
-                            <li>Html5</li>
-                            <li>Css3</li>
-                            <li>Tailwind</li>
-                            <li>Express</li>
-                            <li>Scrum</li>
-                            <li>Github</li>
-                            <li>React.js</li>
-                            <li>Node.js</li>
-                            <li>SQL</li>
-                            <li>MySql</li>
-                            <li>MongoDB</li>
-                            <li>PosgreSql</li>
-                            <li>Next.js</li>
-                            <li>React native</li>
-                        </ul>
+                       <div className=' flex flex-row gap-5 flex-wrap justify-center p-4'>
+                        <div><img className='h-14 w-14 shadow' src={html} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={css} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={tailwind} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={js} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={node} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={github} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={react} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={angular} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={express} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={mongo} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={mysql} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={next} alt="logo" /></div>
+                        <div><img className='h-14 w-14 shadow' src={postgres} alt="logo" /></div>
+                       </div>
                     </div>
 
                 </main>

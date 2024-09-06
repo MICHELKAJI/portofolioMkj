@@ -62,17 +62,7 @@ function Home(){
                         <div><h2 className=' font-bold text-white'>MY WORKS</h2></div>
                         <ImagesSlider className="lg:h-[10rem]" images={images}>
      
-                        <motion.div  initial={{
-          opacity: 0,
-          y: -80,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.6,
-        }} className=' h-28 w-40'></motion.div>
+                        <motion.div  initial={{opacity: 0, y: -80,}} animate={{opacity: 1, y: 0,}} transition={{duration: 0.6,}} className=' h-28 w-40'></motion.div>
                         </ImagesSlider>
                         <p className=' font-bold text-white text-start'>Projects</p>
                     </Link>
@@ -113,7 +103,6 @@ function Home(){
                 <div>
                 <Footer/>
                 </div>
-              
             </main>
         </div>
     )
