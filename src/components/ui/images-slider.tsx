@@ -129,7 +129,7 @@ export const ImagesSlider = ({
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
-          className={cn("absolute inset-0 bg-black/60 z-40 h-28 w-40", overlayClassName)}
+          className={cn("absolute inset-0 bg-black/60 z-40 h-40 w-full", overlayClassName)}
         />
       )}
 
@@ -142,7 +142,7 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-28 w-40 absolute inset-0 object-cover object-center"
+            className="image h-40 w-full absolute inset-0 object-cover object-center"
           />
         </AnimatePresence>
       )}
