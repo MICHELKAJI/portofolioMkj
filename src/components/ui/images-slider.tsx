@@ -129,7 +129,7 @@ export const ImagesSlider = ({
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
-          className={cn("absolute inset-0 bg-black/60 z-40 h-40 w-full", overlayClassName)}
+          className={cn("absolute inset-0 bg-black/60 z-40 h-full w-full", overlayClassName)}
         />
       )}
 

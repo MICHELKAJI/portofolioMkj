@@ -48,62 +48,90 @@ function Home(){
 
     return(
         <div>
-            <main className=' flex flex-col gap-5 font-sans mt-20 h-auto w-full'>
-                <div className=' flex lg:flex-row justify-center flex-wrap lg:gap-5 gap-2'>
-                    <div className=' flex lg:flex-row flex-wrap flex-col lg:gap-8 items-center lg:w-3/6 lg:p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 '>
-                        <div><motion.img initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' h-32 w-32 rounded-full' src={avatar} alt="avatar" /></div>
-                        <div>
-                            <motion.h1 initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white font-bold px-5'>Michel KAJIBWAMI</motion.h1>
-                            <motion.p initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=' text-white w-96 leading-6 p-5'>Certified web developer who specializes in working with JavaScript,React, Node.js; WordPress and MongoBD. Currently exploring full-stack freelance development opportunities. </motion.p>
-                        </div>
-                    </div>
-                   <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col items-center lg:w-[25rem] gap-2 rounded-lg shadow-lg  lg:p-5 p-2 bg-gradient-to-t from-neutral-800 to-zinc-900'>
-                   <Link to='/projects'>
-                        <div><h2 className=' font-bold text-white'>MY WORKS</h2></div>
-                        <ImagesSlider className="lg:h-[10rem]" images={images}>
-     
-                        <motion.div  initial={{opacity: 0, y: -80,}} animate={{opacity: 1, y: 0,}} transition={{duration: 0.6,}} className=' h-28 w-40'></motion.div>
-                        </ImagesSlider>
-                        <p className=' font-bold text-white text-start'>Projects</p>
-                    </Link>
-                    
-                    </div>
-                   
-                    <div onClick={downloadFile} className=' hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center gap-2 border rounded-lg border-slate-400 p-5'>
-                        <div><img className=' lg:h-28 lg:w-28 h-14 w-14' src={cv} alt="cv" /></div>
-                        <p className=' text-white'>My CV</p>
-                        <p><h2 className=' text-white font-bold'>Download</h2></p>
-                    </div>
-                </div>
-                
-                <div className='  flex lg:flex-row justify-center flex-wrap lg:gap-5 gap-3'>
-                <Link to='/service'><div className=' hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 lg:w-96 w-40 lg:gap-3'>
-                    <div className=' flex flex-row justify-center items-center gap-8'>
-                        <div className=' h-8 w-8'><img src={wordpress} alt="logo" /></div>
-                        <div className=' h-8 w-8'><img src={solving} alt="logo" /></div>
-                        <div className=' h-8 w-8'><img src={coding} alt="logo" /></div>
-                    </div>
-                    <p className=' text-white text-xs text-center'>SPECIALIZATION</p>
-                    <h2 className=' text-white font-bold text-center'>Service Offering</h2>
-                 </div>
+    <main className="flex flex-col h-screen pt-20 justify-between font-sans  w-full">
+        <div className="flex flex-col lg:flex-row justify-between  gap-5">
+        <div className="flex flex-col lg:flex-row  items-center gap-5 p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 w-full lg:w-auto">
+    <motion.img
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        className="h-24 w-24 lg:h-32 lg:w-32 rounded-full mb-4 lg:mb-0"
+        src={avatar}
+        alt="avatar"
+    />
+    <div className="text-center lg:text-left flex flex-col items-center lg:items-start w-full lg:w-auto">
+        <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="text-white font-bold text-lg lg:text-xl px-2 lg:px-5"
+        >
+            Michel KAJIBWAMI
+        </motion.h1>
+        <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="text-white leading-5 lg:leading-6 text-sm lg:text-base w-full lg:w-[24rem] p-2 lg:p-5"
+        >
+            Certified web developer who specializes in working with JavaScript, React, Node.js; WordPress, and MongoDB. Currently exploring full-stack freelance development opportunities.
+        </motion.p>
+    </div>
+</div>
+
+            <div className=" hover:scale-105 transition duration-300 flex flex-col items-center w-full lg:w-[25rem] gap-2 rounded-lg shadow-lg py-5 bg-gradient-to-t from-neutral-800 to-zinc-900">
+                <Link to="/projects">
+                    <h2 className="font-bold text-white">MY WORKS</h2>
+                    <ImagesSlider className=" w-72 h-40" images={images}>
+                        <motion.div
+                            initial={{ opacity: 0, y: -80 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="h-28 w-40"
+                        ></motion.div>
+                    </ImagesSlider>
+                    <p className="font-bold text-white text-start">Projects</p>
                 </Link>
-                <div>
-                    <Profil/>
-                </div>
-                <div>
-                <Realisation/>
-                </div>
-                </div>
-                <div className=' flex lg:flex-row flex-wrap justify-center lg:gap-10 gap-2 '>
-                    <div><Contact/></div>
-                    <div><Knowmore/></div>
-                    <div><Platform/></div>
-                </div>
-                <div>
-                <Footer/>
-                </div>
-            </main>
+            </div>
+
+            <div
+                onClick={downloadFile}
+                className="hover:bg-red-500 shadow-md hover:scale-105 transition duration-300 flex flex-col justify-center items-center gap-2 border rounded-lg border-slate-400 p-5 w-full lg:w-auto"
+            >
+                <img className="h-14 w-14 lg:h-28 lg:w-28" src={cv} alt="cv" />
+                <p className="text-white">My CV</p>
+                <h2 className="text-white font-bold">Download</h2>
+            </div>
         </div>
+
+        <div className="flex flex-col lg:flex-row justify-between  gap-5 mt-5">
+            <Link to="/service" className="hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 w-full lg:w-96">
+                <div className="flex flex-row justify-center items-center gap-8">
+                    <img className="h-8 w-8" src={wordpress} alt="logo" />
+                    <img className="h-8 w-8" src={solving} alt="logo" />
+                    <img className="h-8 w-8" src={coding} alt="logo" />
+                </div>
+                <p className="text-white text-xs text-center">SPECIALIZATION</p>
+                <h2 className="text-white font-bold text-center">Service Offering</h2>
+            </Link>
+            <div>
+                <Profil />
+            </div>
+            <div>
+                <Realisation />
+            </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-4 justify-between">
+            <Contact />
+            <Knowmore />
+            <Platform />
+        </div>
+
+        <Footer />
+    </main>
+</div>
+
     )
 }
 export default Home;

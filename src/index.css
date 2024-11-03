@@ -4,6 +4,6 @@
 
 body {
   @apply bg-black;
-  @apply lg:mx-[5rem];
+  @apply lg:px-[5rem];
   
 }
