@@ -12,7 +12,7 @@ function Footer(){
         <div>
             <footer className=' flex lg:flex-row justify-center p-2 mt-2 items-center'>
                 <nav>
-                    <ul className=" flex lg:flex-row lg:gap-3 gap-1 justify-end">
+                    <ul className=" flex lg:flex-row lg:gap-3 gap-1 justify-end items-center">
                         <Link to='/'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm ">HOME</li></Link>
                         <Link to='/about'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm">ABOUT</li></Link>
                         <Link to='/service'><li className=" text-white font-bold p-5 hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm">SERVICES</li></Link>

@@ -31,7 +31,7 @@ function Service(){
                         </div>
                         <div className="">
                             <h2 className=" text-xl font-bold text-white text-center mt-2">MY OFFERINGS</h2>
-                            <motion.div variants={gridCintainerVarias} initial="hidden" animate="show" className=" flex flex-row flex-wrap justify-center gap-5 p-5 bg-gradient-to-t from-neutral-800 to-zinc-900 rounded ">
+                            <motion.div variants={gridCintainerVarias} initial="hidden" animate="show" className=" flex flex-row  flex-wrap justify-center gap-5 p-5 bg-gradient-to-t from-neutral-800 to-zinc-900 rounded ">
                             <motion.div variants={gridVariance} className=" hover:bg-slate-950  hover:scale-105 transition duration-300 border border-gray-900 rounded-lg p-5 shadow-lg bg-zinc-800 ">
                                 <h2 className=" font-bold text-blue-700">MERN, PERN</h2>
                                 <motion.p initial={{opacity: 0, x: 100}} animate={{opacity: 1, x: 0}} transition={{duration: 1, ease: "easeOut", delay:0.2}} className=" text-white w-80">

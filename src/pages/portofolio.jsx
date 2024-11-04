@@ -24,7 +24,7 @@ function Projects (){
         <div>
             <main className=" text-white flex flex-col  gap-14 lg:p-8 p-4 lg:w-full w-sreen h-auto">
                 <h2 className=' text-white font-bold text-lg'>PROJECTS</h2>
-                <div className=' flex lg:flex-row justify-center flex-col lg:gap-10 gap-2'>
+                <div className=' flex lg:flex-row md:flex-row justify-center flex-col lg:gap-10 gap-2'>
                     <div className=' flex flex-col gap-3'>
                         <h3 className=' text-blue-600 font-bold text-lg'>ImmoCongo</h3>
                     <div><img className=' h-60 w-96' src={image} alt="" /></div>
@@ -46,7 +46,7 @@ function Projects (){
                         <a className=' text-blue-300 hover:text-red-500' href="https://immcongo.onrender.com" target='_blank'>following the link...</a>
                     </motion.div>
                 </div>
-                <div className=' flex lg:flex-row justify-center flex-col lg:gap-10 gap-3'>
+                <div className=' flex lg:flex-row md:flex-row justify-center flex-col lg:gap-10 gap-3'>
                     <div className=' flex flex-col gap-3'>
                         <h3 className=' text-blue-600 font-bold text-lg'>Miva Takatisha Group Service Cleaner</h3>
                     <div><img className=' h-60 w-96' src={images} alt="" /></div>
@@ -67,7 +67,7 @@ function Projects (){
                     </motion.div>
                     </AnimatedItem>
                 </div>
-                <div className=' flex lg:flex-row justify-center flex-col lg:gap-10'>
+                <div className=' flex lg:flex-row md:flex-row justify-center flex-col lg:gap-10'>
                     <div className=' flex flex-col gap-3'>
                         <h3 className=' text-blue-600 font-bold text-lg'>Clone Twitter</h3>
                     <div><img className=' h-60 w-96' src={clone} alt="" /></div>
@@ -87,7 +87,7 @@ function Projects (){
                     </motion.div>
                 </div>
                 
-                <div className=' flex lg:flex-row justify-center flex-col lg:gap-10 gap-3'>
+                <div className=' flex lg:flex-row md:flex-row justify-center flex-col lg:gap-10 gap-3'>
                     <div className=' flex flex-col gap-3'>
                         <h3 className=' text-blue-600 font-bold text-lg'>APEH</h3>
                     <div><img className=' h-60 w-96' src={imagess} alt="" /></div>

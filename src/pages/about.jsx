@@ -75,10 +75,25 @@ function About (){
                         </div>
                        
                     </motion.div>
-                    <div className=' flex flex-col gap-2 text-white'>
-                        <h2 className=' font-bold text-lg'>EDUCATIONS</h2>
-                        <div className=' h-[0.5px] w-full bg-slate-500'></div>
-                        <div>
+                    <div>
+                     <h2 className=' font-bold text-lg'>EDUCATIONS</h2>
+                    <div className=' flex flex-row items-start gap-2 text-white'>
+                      
+                        <div className='flex flex-col items-center'>
+                            
+                            <div className='lg:h-4 lg:w-4 md:h-4 md:w-4 h-4 w-4 border border-slate-500 rounded-full'></div>
+
+                            <div className='lg:h-14 lg:w-[0.5px] md:h-14 md:w-[0.5px] h-20 bg-slate-500 border border-dashed '></div>
+
+                            <div className='lg:h-4 lg:w-4 md:h-4 md:w-4 h-4 w-4 border border-slate-500 rounded-full'></div>
+
+                            <div className='lg:h-14 lg:w-[0.5px] md:h-14 md:w-[0.5px] h-20 bg-slate-500 border border-dashed '></div>
+
+                            <div className='lg:h-4 lg:w-4 md:h-4 md:w-4 h-4 w-4 border border-slate-500 rounded-full'></div>
+                        </div>
+                        
+                       <div className=' flex flex-col gap-4'>
+                       <div>
                             <h3 className=' text-xl text-blue-300 font-bold'>web and mobile development</h3>
                             <p>From May 2023 to May 2024 Kinshasa Digital Academy Kinshasa / DR Congo</p>
                         </div>
@@ -89,8 +104,14 @@ function About (){
                         <div>
                             <h3 className=' text-xl text-blue-300 font-bold'>Network and telecommunications license</h3>
                             <p>From October 2019 to December 2020 Higher Institute of Computer Science and Management Goma</p>
-                        </div>
+                        </div> 
+
+                       </div>
+                        
                     </div>
+
+                    </div>
+                    
                     <div className=' flex flex-col gap-2'>
                         <h2 className=' font-bold text-lg'>SKILLS</h2>
                         <div className=' h-[0.5px] w-full bg-slate-500'></div>

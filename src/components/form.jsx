@@ -34,7 +34,7 @@ const handleSubmit = (e) => {
 
     return(
       <div>
-        <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+        <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
           <h2 class="text-2xl font-bold text-gray-200">Contact</h2>
 
           <form class="flex flex-wrap" onSubmit={handleSubmit}>
