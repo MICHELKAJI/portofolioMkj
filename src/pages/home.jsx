@@ -104,9 +104,9 @@ function Home(){
             </div>
         </div>
 
-        <div className="flex flex-wrap lg:flex-row lg:justify-between justify-start md:flex-row md:flex-nowrap  md:gap-5 gap-3 mt-5">
+        <div className="flex flex-wrap lg:flex-row lg:justify-between justify-start md:flex-row md:flex-nowrap  md:gap-5 gap-5 mt-5">
             <Link to="/service" className="hover:bg-red-500 hover:scale-105 transition duration-300 flex flex-col p-5 rounded-lg shadow-lg bg-gradient-to-t from-neutral-800 to-zinc-900 lg:w-96 w-auto">
-                <div className="flex flex-row justify-center items-center gap-8">
+                <div className="flex flex-row justify-center items-center lg:gap-8 gap-3">
                     <img className="h-8 w-8" src={wordpress} alt="logo" />
                     <img className="h-8 w-8" src={solving} alt="logo" />
                     <img className="h-8 w-8" src={coding} alt="logo" />

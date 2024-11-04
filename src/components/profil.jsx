@@ -12,7 +12,7 @@ function Profil(){
      
     return(
         <div>
-            <div className=' flex flex-col gap-5 rounded-lg shadow-lg  p-5 bg-gradient-to-t from-neutral-800 to-zinc-900'>
+            <div className=' flex flex-col lg:gap-5 gap-2 rounded-lg shadow-lg  p-5 bg-gradient-to-t from-neutral-800 to-zinc-900'>
                 <div className=' flex flex-row justify-center items-center gap-3'>
                     <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 rounded-full'><a href="https://www.linkedin.com/in/michel-kajibwami-884803230/" target='_blank'><img className=' h-8 w-8' src={linkedin} alt="logo" /></a></div>
                     <div className=' hover:bg-red-500 hover:scale-105 transition duration-300 rounded-full'><a href="#" onClick={handleClick}><img className=' h-8 w-8' src={whatsapp} alt="logo" /></a></div>
