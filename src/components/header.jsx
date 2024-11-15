@@ -25,7 +25,7 @@ function Header(){
 
     return(
         <div className="fixed top-0 left-0 w-full z-50 bg-black">
-    <header className="flex flex-row justify-between items-center h-16 lg:h-20 px-4 lg:px-20 py-2 lg:py-4">
+    <header className="flex flex-row justify-between items-center h-16 lg:h-20 px-4 lg:px-[5rem] py-2 lg:py-4">
         <div>
             <Link to="/">
                 <img className="h-12 w-12 lg:h-16 lg:w-16" src={logo} alt="logo" />
